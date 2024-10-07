@@ -21,6 +21,7 @@ weather$precip.QC <- ifelse(weather$doy >= 121 & weather$doy <= 188 & weather$ye
                             NA, # value if true
                             weather$Precip) # value if false: uses original precipitation observation
 
+
 weather$FreezeFlag <- ifelse(weather$AirTemp <= 0, # check if at or below zero
                              1, # if true: set flag to 1
                              0) # if false: set flag to zero
